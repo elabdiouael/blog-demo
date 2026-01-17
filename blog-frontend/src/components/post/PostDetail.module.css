@@ -1,0 +1,199 @@
+/* =========================================
+   CONTAINER PRINCIPAL
+   ========================================= */
+   .articleContainer {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 20px;
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* =========================================
+     HEADER & TITRE
+     ========================================= */
+  .header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .metaTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .categoryBadge {
+    background: rgba(56, 189, 248, 0.1);
+    color: #38bdf8; /* Bleu Ciel */
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+  }
+  
+  .date {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    font-family: sans-serif;
+  }
+  
+  .title {
+    font-family: sans-serif; /* Police Pro */
+    font-size: 3rem; /* Très grand titre */
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 2rem;
+    letter-spacing: -1px; /* Look moderne */
+  }
+  
+  @media (max-width: 768px) {
+    .title { font-size: 2rem; }
+  }
+  
+  /* Info Auteur (Style Blog Pro) */
+  .authorRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .authorAvatar {
+    width: 40px; height: 40px;
+    background: #1e293b;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  .authorInfo {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .authorName {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .readTime {
+    color: #64748b;
+    font-size: 0.8rem;
+  }
+  
+  /* =========================================
+     IMAGE (Style Cinématique)
+     ========================================= */
+  .imageWrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 4rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Glow Effect sous l'image */
+  .imageGlow {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%; height: 50%;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.8), transparent);
+  }
+  
+  /* =========================================
+     CONTENU TEXTE
+     ========================================= */
+  .contentWrapper {
+    background: rgba(30, 41, 59, 0.3); /* Fond très léger */
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .content {
+    font-family: sans-serif;
+    font-size: 1.15rem; /* Texte grand et lisible */
+    line-height: 1.8;
+    color: #cbd5e1; /* Gris clair reposant */
+  }
+  
+  .content p {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* =========================================
+     FOOTER & NAVIGATION
+     ========================================= */
+  .footerNav {
+    margin-top: 4rem;
+    text-align: center;
+  }
+  
+  .backButton {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+  
+  .backButton:hover {
+    background: #fff;
+    color: #0f172a;
+    transform: translateY(-2px);
+  }
+  
+  .divider {
+    margin: 4rem 0 2rem 0;
+    text-align: center;
+    position: relative;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  .divider span {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0b0c10; /* Doit matcher le background body */
+    padding: 0 20px;
+    color: #64748b;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  .error {
+    text-align: center;
+    color: #ef4444;
+    margin-top: 4rem;
+    font-size: 1.2rem;
+  }

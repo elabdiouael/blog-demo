@@ -1,0 +1,214 @@
+/* Container Global */
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px 50px;
+  background-color: #050505; /* Very dark grey, not pure black */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Ambient Glow (Luxury Vibe) */
+.ambientLight {
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, transparent 70%);
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+  z-index: 1;
+}
+
+/* THE MAIN CARD */
+.card {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  background: rgba(30, 30, 35, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 800px) {
+  .card { grid-template-columns: 1fr; }
+}
+
+/* ===========================
+   SIDEBAR (Profile)
+   =========================== */
+.sidebar {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 3rem 2rem;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatarBox {
+  margin-bottom: 1.5rem;
+}
+
+.avatarPlaceholder {
+  width: 100px; height: 100px;
+  background: linear-gradient(135deg, #e2e8f0, #94a3b8);
+  color: #0f172a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'Times New Roman', serif; /* Elegant serif for initial */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.identity {
+  margin-bottom: 2rem;
+}
+
+.name {
+  font-family: sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 3px;
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8; /* Light Blue */
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.divider {
+  width: 50px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 auto 2rem auto;
+}
+
+.contactInfo {
+  width: 100%;
+  text-align: left;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  padding-bottom: 8px;
+}
+
+.label { color: #64748b; font-weight: 500; }
+.value { color: #cbd5e1; }
+.valueActive { color: #10b981; font-weight: 600; }
+
+/* ===========================
+   MAIN CONTENT
+   =========================== */
+.mainContent {
+  padding: 3rem;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid #38bdf8; /* Blue accent line */
+  padding-left: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.text {
+  line-height: 1.8;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.text strong {
+  color: #fff;
+}
+
+/* Skills Grid */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 600px) {
+  .skillsGrid { grid-template-columns: 1fr; }
+}
+
+.skillItem {
+  margin-bottom: 1rem;
+}
+
+.skillHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+.progressBarBg {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8, #818cf8); /* Blue to Indigo gradient */
+  border-radius: 3px;
+  transition: width 1s ease-out;
+}
+
+/* Footer Credits */
+.footerCredit {
+  margin-top: auto;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.profName {
+  color: #e2e8f0;
+  font-weight: 600;
+}

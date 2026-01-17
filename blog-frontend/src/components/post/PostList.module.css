@@ -1,0 +1,21 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid bla media queries */
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .error {
+    text-align: center;
+    color: #ef4444;
+    padding: 2rem;
+    background: #fef2f2;
+    border-radius: var(--border-radius);
+  }
+  
+  .empty {
+      text-align: center;
+      color: #64748b;
+      padding: 3rem;
+      font-size: 1.1rem;
+  }

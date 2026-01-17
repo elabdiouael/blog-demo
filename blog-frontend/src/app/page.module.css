@@ -1,0 +1,156 @@
+.container {
+    min-height: 100vh;
+  }
+  
+  /* --- HERO SECTION --- */
+  .hero {
+    height: 100vh; /* Shada l'ecran kamel */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    /* L'text ghadi yban b7ala kharej mn l nebula */
+    mix-blend-mode: lighten; 
+  }
+  
+  .subTitle {
+    font-family: var(--font-reading);
+    color: var(--holo-cyan);
+    font-size: 1rem;
+    letter-spacing: 5px;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.5s forwards;
+  }
+  
+  .mainTitle {
+    font-family: var(--font-display);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .prefix {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 3px;
+    opacity: 0;
+    animation: revealBlur 1.5s cubic-bezier(0.19, 1, 0.22, 1) 1s forwards;
+  }
+  
+  .name {
+    font-size: 6rem;
+    font-weight: 900;
+    color: var(--holo-white);
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    /* L'effet dyal text transparent li kayt7erek m3a background */
+    background: linear-gradient(180deg, #fff, rgba(255,255,255,0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px rgba(0, 240, 255, 0.3));
+    
+    opacity: 0;
+    transform: scale(1.1);
+    animation: emerge 2s cubic-bezier(0.19, 1, 0.22, 1) 1.5s forwards;
+  }
+  
+  .profBox {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    animation: slideUp 1s ease-out 2.5s forwards;
+  }
+  
+  .profLabel {
+    color: var(--holo-magenta);
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+  }
+  
+  .profName {
+    color: var(--holo-white);
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  /* --- ANIMATIONS --- */
+  @keyframes revealBlur {
+    0% { filter: blur(20px); opacity: 0; transform: translateY(20px); }
+    100% { filter: blur(0); opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes emerge {
+    0% { opacity: 0; transform: scale(1.2) translateY(50px); filter: blur(10px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); filter: blur(0); }
+  }
+  
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* --- SCROLL DOWN --- */
+  .scrollDown {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 3s forwards;
+  }
+  
+  .scrollDown span {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .line {
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(to bottom, var(--holo-cyan), transparent);
+  }
+  
+  /* --- POSTS SECTION STYLES --- */
+  .postsSection {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  
+  .postsHeader {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .sectionTitle {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--holo-white);
+    letter-spacing: 5px;
+  }
+  
+  .divider {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--holo-cyan), transparent);
+    box-shadow: 0 0 10px var(--holo-cyan);
+  }

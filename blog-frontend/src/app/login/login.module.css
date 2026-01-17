@@ -1,0 +1,184 @@
+/* Container li chdd l ecran */
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Grid Decoration */
+.gridOverlay {
+    position: absolute;
+    width: 100%; height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -1;
+}
+
+/* THE LOGIN CARD */
+.loginCard {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(10, 15, 25, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    padding: 2.5rem;
+    border-radius: 4px;
+    
+    /* FIX 3D: Mohim bzzaf */
+    position: relative;
+    transform-style: preserve-3d; 
+    z-index: 10; /* Base level */
+    
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    overflow: visible; /* FIX: Ila kan hidden imken y9te3 lina elements li kharjin */
+}
+
+/* Border Glow Animation */
+.loginCard::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 3px;
+    background: linear-gradient(90deg, transparent, var(--holo-cyan), transparent);
+    animation: scan 4s linear infinite;
+    z-index: 11;
+}
+
+@keyframes scan {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+    transform: translateZ(30px); /* 3D Pop */
+}
+
+.logo {
+    color: var(--holo-white);
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.subText {
+    color: var(--holo-cyan);
+    font-size: 0.7rem;
+    font-family: 'Courier New', monospace;
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+/* Inputs Group */
+.group {
+    margin-bottom: 1.5rem;
+    position: relative;
+    transform-style: preserve-3d; /* FIX: Bach l input dakhel yfhem 3D */
+    
+    /* FIX MAJOR: Kherrejnahom b 60px bach yfouto l glare */
+    transform: translateZ(60px); 
+    z-index: 100; 
+}
+
+.inputIcon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    z-index: 102; /* Fo9 input */
+    pointer-events: none; /* FIX: Icon mayblockich click */
+}
+
+.input {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #334155;
+    padding: 12px 12px 12px 45px; 
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s;
+    border-radius: 4px;
+    
+    /* FIX: Force Clickability */
+    position: relative;
+    z-index: 101; /* 3ali bzaf */
+    cursor: text;
+}
+
+.input:focus {
+    border-color: var(--holo-cyan);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+    background: rgba(0, 240, 255, 0.02);
+}
+
+.input:focus + .inputIcon {
+    color: var(--holo-cyan);
+    text-shadow: 0 0 8px var(--holo-cyan);
+}
+
+/* Button */
+.submitBtn {
+    width: 100%;
+    padding: 12px;
+    background: var(--holo-cyan);
+    color: #000;
+    border: none;
+    font-family: var(--font-display);
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    
+    /* FIX: Button hta howa kharej 3ndk bzaf */
+    position: relative;
+    transform: translateZ(70px); 
+    z-index: 101;
+    overflow: hidden;
+}
+
+.submitBtn:hover {
+    box-shadow: 0 0 20px var(--holo-cyan);
+    transform: translateZ(75px); /* Click Effect */
+}
+
+.submitBtn:disabled {
+    background: #334155;
+    color: #94a3b8;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: translateZ(50px);
+}
+
+/* Error Message */
+.errorBox {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid #ef4444;
+    color: #ef4444;
+    padding: 10px;
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    animation: shake 0.4s ease-in-out;
+    transform: translateZ(40px);
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateZ(40px) translateX(0); }
+    25% { transform: translateZ(40px) translateX(-5px); }
+    75% { transform: translateZ(40px) translateX(5px); }
+}

@@ -1,0 +1,182 @@
+/* =========================================
+   GLOBAL LAYOUT (CLEAN & DARK)
+   ========================================= */
+   .container {
+    min-height: 100vh;
+    padding: 120px 20px 80px;
+    /* Background Wa7d: K7el n9i w Rteb (Slate 950) */
+    background-color: #020617; 
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.mainTitle {
+    font-family: sans-serif;
+    font-size: 3.5rem;
+    /* Texte Blanc Simple & Classe */
+    color: #ffffff; 
+    margin-bottom: 0.5rem;
+    letter-spacing: -2px;
+    font-weight: 800;
+}
+
+.subtitle {
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    color: #38bdf8; /* Accent Bleu Ciel */
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 10px;
+    display: inline-block;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.3);
+    padding-bottom: 5px;
+}
+
+/* =========================================
+   LA GRILLE (GRID)
+   ========================================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================================
+   LES CARTES (INNER CARD STYLE)
+   ========================================= */
+.cardInner {
+    height: 100%;
+    /* GLASSMORPHISM T9il: Bach yban fo9 lk7el */
+    background: rgba(30, 41, 59, 0.4); 
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.15); /* Lumière Top */
+    border-radius: 20px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Shadow 9wiya */
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.cardInner:hover {
+    background: rgba(30, 41, 59, 0.6);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+/* Header de la Carte */
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.idNumber {
+    font-family: 'Times New Roman', serif;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.1); 
+    font-weight: 700;
+    font-style: italic;
+}
+
+.iconDot {
+    width: 45px; height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    background: rgba(0, 0, 0, 0.3); /* Darker icon bg */
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Titres */
+.cardTitle {
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+    color: #fff;
+}
+
+.sub {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    display: block;
+    opacity: 0.9;
+}
+
+/* Contenu Texte */
+.content {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #cbd5e1;
+    flex-grow: 1;
+}
+
+.row {
+    margin-bottom: 1.5rem;
+}
+
+.label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #64748b;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.textValue {
+    font-weight: 400;
+    color: #e2e8f0;
+}
+
+/* Boite d'exemple */
+.exampleBox {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.exampleText {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    font-family: monospace; 
+    background: rgba(0, 0, 0, 0.3);
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Footer Page */
+.footer {
+    text-align: center;
+    margin-top: 6rem;
+    color: #475569;
+    font-size: 0.75rem;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
